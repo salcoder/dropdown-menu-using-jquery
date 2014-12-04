@@ -19,7 +19,6 @@ $("#menu ul li a").each(function () {
 
   // Option's text is the text of link
   $option.text($anchor.text());
-  console.log($anchor.text());
 
   // Option's value is the href
   $option.val($anchor.attr("href"));
@@ -28,14 +27,9 @@ $("#menu ul li a").each(function () {
   $select.append($option);
 
 });
-// Create button 
-var $button = $("<button>Go</button>");
-$("#menu").append($button);
-// Bind click to button
-$button.click(function () {
-  // Go to select's location
+
+// Bind change listener to the select
+$('select').change(function () {
+  // Go to the link
   window.location = $select.val();
 });
-  
-// Modify CSS to hide links on small resolutions and show button and select
-  // Also hides select and button on larger resolutions

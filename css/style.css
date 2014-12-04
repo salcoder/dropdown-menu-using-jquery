@@ -69,7 +69,7 @@ Also hides select and button on larger width and show's links
 }
 
 @media screen and (min-width: 569px) {
-	#menu select, #menu button {
+	#menu select {
 		display: none;
 	}
 }
