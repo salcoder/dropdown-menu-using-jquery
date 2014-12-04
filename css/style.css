@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #fff;
+	background: #0aa;
 }
 
 #menu {
@@ -13,6 +13,7 @@ body {
 	height: 60px;
 	padding: 0 5px 0;
 	text-align: center;
+	box-shadow: 2px 2px 5px #fff;
 }
 
 ul {
@@ -33,7 +34,7 @@ ul li a {
 }
 
 ul li.selected {
-	background: #fff;
+	background: #0aa;
 }
 
 ul li.selected a {
@@ -66,10 +67,22 @@ Also hides select and button on larger width and show's links
 	#menu ul {
 		display: none;
 	}
+
+	#menu {
+		position: relative;
+	}
+
+	#select-wrapper  {
+		width: 100%;
+		width: 35%;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+	}
 }
 
 @media screen and (min-width: 569px) {
-	#menu select {
+	#select-wrapper {
 		display: none;
 	}
 }

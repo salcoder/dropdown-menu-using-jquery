@@ -3,7 +3,7 @@
 
 // Create select and append to menu
 var $select = $("<select></select>");
-$("#menu").append($select);
+$("#select-wrapper").append($select);
 
 // Cycle over menu links and execute some code
 $("#menu ul li a").each(function () {
@@ -29,7 +29,7 @@ $("#menu ul li a").each(function () {
 });
 
 // Bind change listener to the select
-$('select').change(function () {
+$select.change(function () {
   // Go to the link
   window.location = $select.val();
 });
