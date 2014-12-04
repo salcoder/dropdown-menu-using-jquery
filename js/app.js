@@ -12,15 +12,20 @@ $("#menu ul li a").each(function () {
   // Create an option
   var $option = $("<option></option>");
 
+  // Deal with selected options depending on current page
+  if($anchor.parent().hasClass('selected')) {
+    $option.prop("selected", true);
+  }  
+
   // Option's text is the text of link
   $option.text($anchor.text());
+  console.log($anchor.text());
 
   // Option's value is the href
   $option.val($anchor.attr("href"));
   
   // Append option to select
   $select.append($option);
-  
 
 });
 // Create button 
@@ -34,4 +39,3 @@ $button.click(function () {
   
 // Modify CSS to hide links on small resolutions and show button and select
   // Also hides select and button on larger resolutions
-// Deal with selected options depending on current page
