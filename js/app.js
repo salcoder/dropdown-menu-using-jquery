@@ -2,11 +2,27 @@
 // Solution: To hide the text links and swap them out with a more appropriate navigation
 
 // Create select and append to menu
-// Cycle over menu links
+var $select = $("<select></select>");
+$("#menu").append($select);
+
+// Cycle over menu links and execute some code
+$("#menu ul li a").each(function () {
+  var $anchor = $(this);
+
   // Create an option
+  var $option = $("<option></option>");
+
   // Option's text is the text of link
+  $option.text($anchor.text());
+
   // Option's value is the href
+  $option.val($anchor.attr("href"));
+  
   // Append option to select
+  $select.append($option);
+  
+
+});
 // Create button 
 // Bind click to button
   // Go to select's location
